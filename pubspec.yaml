@@ -84,7 +84,6 @@ dependencies:
   hadith: ^1.0.0
 
   # Notifications
-  # awesome_notifications: ^0.10.0
 
   # Firebase
   firebase_core: ^3.4.0
@@ -107,3 +106,13 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+
+  assets:
+    - assets/
+    - assets/images/
+
+flutter_assets:
+  assets_path: assets/images/
+  output_path: lib/constants/
+  filename: assets.dart
+  field_prefix:
