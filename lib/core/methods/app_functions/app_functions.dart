@@ -71,22 +71,6 @@ class AppFunctions {
     return address;
   }
 
-  static String prayerTimeToString(String prayerTime, context) {
-    if (prayerTime == 'fajrafter' || prayerTime == 'fajr') {
-      return AppLocalizations.of(context)!.fajr;
-    } else if (prayerTime == 'dhuhr') {
-      return AppLocalizations.of(context)!.dhuhr;
-    } else if (prayerTime == 'asr') {
-      return AppLocalizations.of(context)!.asr;
-    } else if (prayerTime == 'maghrib') {
-      return AppLocalizations.of(context)!.maghrib;
-    } else if (prayerTime == 'isha') {
-      return AppLocalizations.of(context)!.isha;
-    } else {
-      return AppLocalizations.of(context)!.shuruq;
-    }
-  }
-
   static String getArabicOrdinal(int englishNumber) {
     if (englishNumber < 1 || englishNumber > 30) {
       return "الرقم خارج النطاق";
@@ -190,8 +174,9 @@ class AppFunctions {
       if (arabicDigits.containsKey(number[i])) {
         arabicNumber.write(arabicDigits[number[i]]);
       } else {
-        arabicNumber
-            .write(number[i]); // If not a digit, keep the character as is
+        arabicNumber.write(
+          number[i],
+        ); // If not a digit, keep the character as is
       }
     }
 
@@ -234,7 +219,7 @@ class AppFunctions {
       521,
       541,
       561,
-      582
+      582,
     ];
 
     // Determine the part based on the page number

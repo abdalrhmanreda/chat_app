@@ -1,3 +1,4 @@
+import 'package:chat_app/config/routes/routes_path.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,7 +26,7 @@ class ChatApp extends StatelessWidget {
               top: false,
               bottom: true,
               child: MaterialApp(
-                locale: const Locale('ar', 'EG'),
+                locale: const Locale('en', 'US'),
                 localizationsDelegates: AppLocalizations.localizationsDelegates,
                 supportedLocales: AppLocalizations.supportedLocales,
                 debugShowCheckedModeBanner: false,
@@ -33,7 +34,7 @@ class ChatApp extends StatelessWidget {
                 theme: Style.lightTheme,
                 darkTheme: Style.darkTheme,
                 themeMode: ThemeMode.light,
-                initialRoute: initRoute,
+                initialRoute: RoutePath.chatsScreen,
               ),
             ),
           ),
